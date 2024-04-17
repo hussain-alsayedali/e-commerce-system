@@ -1,3 +1,4 @@
+import { FaTrash, FaHeart } from "react-icons/fa";
 import emptycart from "./src/assets/emptycart.png";
 
 export default function ProductCartCard({
@@ -42,8 +43,12 @@ export default function ProductCartCard({
           </button>
         </div>
         <div className="flex gap-8">
-          <button>♥</button>
-          <button>✖</button>
+          <button>
+            <FaHeart />
+          </button>
+          <button>
+            <FaTrash />
+          </button>
         </div>
       </div>
     </div>
