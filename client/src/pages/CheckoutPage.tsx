@@ -1,20 +1,19 @@
-import React from 'react';
-// Import subcomponents here
-// import CartItemList from './CartItemList';
-// import PaymentSection from './PaymentSection';
-// import OrderSummary from './OrderSummary';
-// import CheckoutButton from './CheckoutButton';
+import Input from '../components/Input.tsx';
+import Content from '../components/Content.tsx';
+
 
 const CheckoutPage = () => {
-  // You would manage your state and context here
+  
 
   return (
-    <div className="checkout-page">
-      {/* <CartItemList />
-      <PaymentSection />
-      <OrderSummary />
-      <CheckoutButton /> */}
-    </div>
+    <><div className="py-10 px-20">
+          <h1 className="text-4xl font-semibold text-purple-900">Checkout</h1>
+          <div className="flex justify-between">
+      <Input />
+      <Content />
+          </div>
+      </div>
+      </>
   );
 };
 
