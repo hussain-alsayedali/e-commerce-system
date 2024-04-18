@@ -8,8 +8,11 @@ const Input: FC = () => {
       <div className="mt-10">
         <p className="text-xl mb-5 font-semibold text-purple-900">Contact Information</p>
         <div className="grid mb-4 items-center">
+          <div>
           <FontAwesomeIcon icon={faEnvelope} className="text-purple-900" />
           <label htmlFor="email" className="text-purple-900 ml-2">E-mail</label>
+          </div>
+          
           <input
             id="email"
             type="text"
@@ -19,8 +22,10 @@ const Input: FC = () => {
         </div>
 
         <div className="grid mb-4 items-center">
+        <div>
           <FontAwesomeIcon icon={faPhone} className="text-purple-900" />
           <label htmlFor="phone" className="text-purple-900 ml-2">Phone</label>
+          </div>
           <input
             id="phone"
             type="text"
@@ -32,8 +37,10 @@ const Input: FC = () => {
         <p className="text-xl mb-5 mt-10 font-semibold text-purple-900">Shipping Address</p>
 
         <div className="grid mb-4 items-center">
+        <div>
           <FontAwesomeIcon icon={faUser} className="text-purple-900" />
           <label htmlFor="name" className="text-purple-900 ml-2">Name</label>
+          </div>
           <input
             id="name"
             type="text"
@@ -43,8 +50,10 @@ const Input: FC = () => {
         </div>
 
         <div className="grid mb-4 items-center">
+        <div>
           <FontAwesomeIcon icon={faHome} className="text-purple-900" />
           <label htmlFor="address" className="text-purple-900 ml-2">Address</label>
+          </div>
           <input
             id="address"
             type="text"
@@ -54,8 +63,10 @@ const Input: FC = () => {
         </div>
 
         <div className="grid mb-4 items-center">
+        <div>
           <FontAwesomeIcon icon={faCity} className="text-purple-900" />
           <label htmlFor="city" className="text-purple-900 ml-2">City</label>
+          </div>
           <input
             id="city"
             type="text"
