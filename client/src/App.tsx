@@ -5,6 +5,7 @@ import SignupPage from "./pages/SignupPage.tsx";
 import SigninPage from "./pages/SinginPage.tsx";
 import ShoppingCartPage from "./pages/ShoppingCartPage.tsx";
 import ProductViewPage from "./pages/ProductViewPage.tsx";
+import AddProduct from "./pages/AddProduct.tsx";
 import React from "react";
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <>
-      <ProductViewPage />
+      <AddProduct />
     </>
   );
 }
