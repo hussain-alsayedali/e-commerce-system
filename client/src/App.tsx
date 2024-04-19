@@ -8,6 +8,7 @@ import ProductViewPage from "./pages/ProductViewPage.tsx";
 import AddProduct from "./pages/AddProduct.tsx";
 import PaymentPage from "./pages/PaymentPage.tsx";
 import React from "react";
+import MainPage from "./pages/MainPage.tsx";
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+<<<<<<< Updated upstream
        <Router>
       <Routes>
         <Route path="/" element={<PaymentPage />} />
@@ -27,6 +29,9 @@ function App() {
         <Route path="/payment-success" element={<PaymentSuccessPage />} />
       </Routes>
     </Router>
+=======
+      <MainPage />
+>>>>>>> Stashed changes
     </>
   );
 }
