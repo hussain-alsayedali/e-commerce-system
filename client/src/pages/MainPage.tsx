@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaHeart } from "react-icons/fa";
+import ChatBotPage from "./ChatBotPage";
 
 const MainPage = () => {
   // You would manage your state and context here
+  const [visibleChatBot, setVisibleChatBot] = useState(false)
 
+  const toggleChatBot = () =>{
+    setVisibleChatBot(!visibleChatBot)
+  }
+  
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -41,7 +47,7 @@ const MainPage = () => {
             />
           </div>
         </div>
-        <button className="flex items-center bg-semiwhite text-black pr-6 pl-3 py-2 rounded-md">
+        <button className="flex items-center bg-semiwhite text-black pr-6 pl-3 py-2 rounded-md" onClick={toggleChatBot}>
           <span className="pr-2">Chatbot</span>
           <img
             src="./src/assets/chatbot.png"
@@ -313,6 +319,7 @@ const MainPage = () => {
           </div>
         </Carousel>
       </div>
+      <ChatBotPage visible = {visibleChatBot} toggleChatBot = {toggleChatBot}/>
     </div>
   );
 };

@@ -18,20 +18,15 @@ import PaymentSuccessPage from './pages/PaymentSuccessPage';
 
 function App() {
   const [count, setCount] = useState(0);
-
   return (
     <>
-<<<<<<< Updated upstream
        <Router>
       <Routes>
-        <Route path="/" element={<PaymentPage />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/payment-form" element={<PaymentForm />} />
         <Route path="/payment-success" element={<PaymentSuccessPage />} />
       </Routes>
     </Router>
-=======
-      <MainPage />
->>>>>>> Stashed changes
     </>
   );
 }
