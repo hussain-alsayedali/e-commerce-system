@@ -53,7 +53,9 @@ export default function ShoppingCartPage() {
         );
       })}
       <div className="w-11/12  p-8">
+        <a href="/paymentpage"> 
         <Button title="Checkout" />
+        </a>
       </div>
     </div>
   );
