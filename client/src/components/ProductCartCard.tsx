@@ -35,11 +35,11 @@ export default function ProductCartCard({
             onClick={removeUnit}
             className=" p-2 bg-purple-300 w-12 rounded"
           >
-            -1
+            -
           </button>
           <span className="border p-2  w-12 rounded text-center">{units}</span>
           <button onClick={addUnit} className=" p-2 bg-purple-300 w-12 rounded">
-            +1
+            +
           </button>
         </div>
         <div className="flex gap-8">

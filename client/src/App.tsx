@@ -9,31 +9,34 @@ import ShoppingCartPage from "./pages/ShoppingCartPage";
 import ProductViewPage from "./pages/ProductViewPage";
 import PaymentSuccessPage from "./pages/PaymentSuccessPage";
 
-import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 import PaymentForm from './components/PaymentForm';
+import PaymentPage from "./pages/PaymentPage";
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState<boolean>(true);
 
   return (
     <Router>
-           <div className="flex">
+      <div className="flex">
       <Sidebar sidebarToggle={sidebarToggle} role="user"/>
-      <Dashboard sidebarToggle={sidebarToggle}
-                 setSidebarToggle={setSidebarToggle}/>
-    </div>
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/payment-form" element={<PaymentForm />} />
-            <Route path="/payment-success" element={<PaymentSuccessPage />} />
-            <Route path="/product-view" element={<ProductViewPage />} />
-            <Route path="/signin" element={<SigninPage />} />
-            <Route path="/signup" element={<SignupPage />} />  // Corrected to show SignupPage
-            <Route path="/shopping-cart" element={<ShoppingCartPage />} />
-          </Routes>
+      <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
+      </div>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/signin" element={<SigninPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/paymentpage" element={<PaymentPage />} />
+        <Route path="/paymentsuccess" element={<PaymentSuccessPage />} />
+        <Route path="/productview" element={<ProductViewPage />} />
+        <Route path="/shoppingcart" element={<ShoppingCartPage />} />
+      </Routes>
+      <Footer/>
     </Router>
+
+    
   );
 }
 

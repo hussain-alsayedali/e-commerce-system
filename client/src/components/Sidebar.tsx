@@ -8,7 +8,7 @@ type Props = {
 
 function Sidebar({ sidebarToggle, role }: Props) {
   const adminItems = [
-    { name: 'Products', icon: FaBox, link: "product-view" },
+    { name: 'Products', icon: FaBox, link: "productview" },
     { name: 'Customer Service', icon: FaHeadset, link: "#" },
     { name: 'Dashboard', icon: FaChartBar, link: "#" },
   ];
@@ -18,11 +18,12 @@ function Sidebar({ sidebarToggle, role }: Props) {
     { name: 'History', icon: FaHistory, link: "#" },
     { name: 'Favorite', icon: FaHeart , link: "#" },
     { name: 'Order Tracker', icon: FaTruck, link: "#" },
-    { name: 'Customer Service', icon: FaHeadset, link: "#"},
+    { name: 'Contact us', icon: FaHeadset, link: "#"},
   ];
 
   const itemsToRender = role === 'admin' ? adminItems : userItems;
 
+  
   return (
     <div className={`${sidebarToggle ? 'hidden' : 'block'} z-[2] w-36 md:w-64 bg-nuetralpurple fixed h-full px-4 py-2`}>
       <ul className="mt-3 text-xs text-white font-bold md:text-sm">
