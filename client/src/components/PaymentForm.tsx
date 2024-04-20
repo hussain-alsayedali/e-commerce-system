@@ -12,7 +12,7 @@ const PaymentForm = () => {
         e.preventDefault();
         console.log({ paymentMethod, cardNumber, expiryDate, cvv });
        
-        navigate('/payment-success'); 
+        navigate('/paymentsuccess'); 
     };
 
 

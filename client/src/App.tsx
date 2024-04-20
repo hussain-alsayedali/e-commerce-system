@@ -31,7 +31,7 @@ function App() {
         <Route path="/productview" element={<ProductViewPage />} />
         <Route path="/shoppingcart" element={<ShoppingCartPage />} />
       </Routes>  
-      <Footer/>
+      {/* <Footer/> */}
     </Router>
 
 
