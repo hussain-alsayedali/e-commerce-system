@@ -20,10 +20,8 @@ function App() {
 
   return (
     <Router>
-      <div className="flex">
       <Sidebar sidebarToggle={sidebarToggle} role="user"/>
       <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
-      </div>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/signin" element={<SigninPage />} />
@@ -32,9 +30,11 @@ function App() {
         <Route path="/paymentsuccess" element={<PaymentSuccessPage />} />
         <Route path="/productview" element={<ProductViewPage />} />
         <Route path="/shoppingcart" element={<ShoppingCartPage />} />
-      </Routes>
+      </Routes>  
       <Footer/>
     </Router>
+
+
 
     
   );
