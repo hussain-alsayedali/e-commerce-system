@@ -35,7 +35,6 @@ const MainPage = () => {
 
   return (
     <div>
-
       <div className="w-full flex justify-around p-4">
         <div className="relative mr-2">
           <input

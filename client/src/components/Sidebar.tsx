@@ -14,11 +14,11 @@ function Sidebar({ sidebarToggle, role }: Props) {
   ];
 
   const userItems = [
-    { name: 'Orders', icon: FaBox, link: "product-view" },
-    { name: 'History', icon: FaHistory, link: "#" },
-    { name: 'Favorite', icon: FaHeart , link: "#" },
-    { name: 'Order Tracker', icon: FaTruck, link: "#" },
-    { name: 'Contact us', icon: FaHeadset, link: "#"},
+    { name: 'Orders', icon: FaBox, link: "/" },
+    { name: 'History', icon: FaHistory, link: "/" },
+    { name: 'Favorite', icon: FaHeart , link: "/" },
+    { name: 'Order Tracker', icon: FaTruck, link: "/" },
+    { name: 'Contact us', icon: FaHeadset, link: "/"},
   ];
 
   const itemsToRender = role === 'admin' ? adminItems : userItems;

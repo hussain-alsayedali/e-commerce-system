@@ -23,7 +23,7 @@ const Navbar = ({ sidebarToggle, setSidebarToggle }: Props) => {
   return (
     <nav className={`bg-semiwhite text-darkpurple p-4 py-3 flex justify-between ${sidebarToggle ? "" : "md:ml-64 ml-36"}`}>
       <div className="flex items-center" style={{ justifyContent: iconPosition }}>
-        <FaBars className=" me-4 relative cursor-pointer z-[2]" onClick={() => setSidebarToggle(!sidebarToggle)} />
+        <FaBars className=" me-4 relative cursor-pointer z-[2] hover:opacity-50" onClick={() => setSidebarToggle(!sidebarToggle)} />
       </div>
       <span className=" font-semibold">Market</span>
       
@@ -35,9 +35,9 @@ const Navbar = ({ sidebarToggle, setSidebarToggle }: Props) => {
         Sign up
         </button>
         <a href="/shoppingcart">
-          <FaShoppingBasket className=" w-6 h-6 mt-1 cursor-pointer" />
+          <FaShoppingBasket className=" w-6 h-6 mt-1 cursor-pointer hover:opacity-50" />
         </a>
-        <FaUserCircle className=" w-6 h-6 mt-1 cursor-pointer" />
+        <FaUserCircle className=" w-6 h-6 mt-1 cursor-pointer hover:opacity-50" />
       </div>
     </nav>
   );
