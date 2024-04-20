@@ -33,14 +33,8 @@ const MainPage = () => {
     },
   };
 
-  const [sidebarToggle, setSidebarToggle] = useState<boolean>(true)
   return (
     <div>
-           <div className="flex">
-      {/* <Sidebar sidebarToggle={sidebarToggle}/>
-      <Dashboard sidebarToggle={sidebarToggle}
-                 setSidebarToggle={setSidebarToggle}/> */}
-    </div>
 
       <div className="w-full flex justify-around p-4">
         <div className="relative mr-2">
@@ -66,12 +60,13 @@ const MainPage = () => {
           />
         </button>
       </div>
-      <div className="bg-darkpurple w-full flex justify-around p-4">
-        <div className="bg-nuetralpurple p-2 px-20 ml-15 rounded-md text-white">
+      <div className="bg-darkpurple w-full flex justify-between p-4">
+        <div></div>
+        <div className="bg-nuetralpurple w-[280px] p-2 px-20 ml-15 rounded-md text-white text-center">
           Popular
         </div>
-        <button className="flex items-center bg-nuetralpurple text-white px-4 py-2 ml-14 rounded-md">
-          <span className="">Filter</span>
+        <button className=" bg-nuetralpurple w-[60px] text-center text-white px-4 py-2 ml-14 rounded-md">
+         Filter
         </button>
       </div>
       <div className="pl-20">
@@ -240,10 +235,15 @@ const MainPage = () => {
           </div>
         </Carousel>
       </div>
-      <div className="bg-lightpurple w-full flex justify-around p-4 mt-10">
-        <div className="bg-darkpurple p-2 px-20 ml-15 rounded-md text-white">
+      <div className="bg-lightpurple w-full flex justify-between p-4 mt-10">
+        <div></div>
+        <div className="bg-darkpurple w-[280px] text-center p-2 px-20 ml-15 rounded-md text-white">
           Recumendation
         </div>
+        <button className=" bg-nuetralpurple w-[60px] text-center text-white px-4 py-2 ml-14 rounded-md">
+
+        </button>
+
       </div>
       <div className="pl-20">
         <Carousel responsive={responsive} className="py-10">
