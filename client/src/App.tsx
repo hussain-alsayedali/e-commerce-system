@@ -25,20 +25,15 @@ function App() {
 
   return (
     <>
-       {/* <Router>
-  return (
-    <>
-       <Router>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/payment-form" element={<PaymentForm />} />
-        <Route path="/payment-success" element={<PaymentSuccessPage />} />
-      </Routes>
-    </Router> */}
-
-
-    <MainPage/>
-
+      <Sidebar sidebarToggle={sidebarToggle}/>
+      <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/payment-form" element={<PaymentForm />} />
+          <Route path="/payment-success" element={<PaymentSuccessPage />} />
+        </Routes>
+      </Router>
     </>
   );
 }

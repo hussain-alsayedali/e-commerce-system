@@ -6,7 +6,7 @@ interface props {
 // md:px-8 md:w-auto
 export default function Button({ title }: props) {
   return (
-    <button className="bg-purple-800 text-white rounded-3xl w-full py-2 px-2  ">
+    <button className="bg-purple-800 text-white rounded-lg w-full py-2 px-2 hover:opacity-50  ">
       {title}
     </button>
   );

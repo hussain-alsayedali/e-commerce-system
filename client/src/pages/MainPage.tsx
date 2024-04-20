@@ -37,9 +37,9 @@ const MainPage = () => {
   return (
     <div>
            <div className="flex">
-      <Sidebar sidebarToggle={sidebarToggle}/>
+      {/* <Sidebar sidebarToggle={sidebarToggle}/>
       <Dashboard sidebarToggle={sidebarToggle}
-                 setSidebarToggle={setSidebarToggle}/>
+                 setSidebarToggle={setSidebarToggle}/> */}
     </div>
 
       <div className="w-full flex justify-around p-4">
