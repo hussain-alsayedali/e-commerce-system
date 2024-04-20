@@ -9,6 +9,9 @@ import AddProduct from "./pages/AddProduct.tsx";
 import PaymentPage from "./pages/PaymentPage.tsx";
 import React from "react";
 import MainPage from "./pages/MainPage.tsx";
+import Sidebar from "./components/Sidebar";
+import Navbar from  "./components/Navbar";
+import Dashboard from  "./components/Dashboard";
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -18,20 +21,20 @@ import PaymentSuccessPage from './pages/PaymentSuccessPage';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [sidebarToggle, setSidebarToggle] = useState<boolean>(true)
 
   return (
     <>
-<<<<<<< Updated upstream
-       <Router>
+       {/* <Router>
       <Routes>
         <Route path="/" element={<PaymentPage />} />
         <Route path="/payment-form" element={<PaymentForm />} />
         <Route path="/payment-success" element={<PaymentSuccessPage />} />
       </Routes>
-    </Router>
-=======
-      <MainPage />
->>>>>>> Stashed changes
+    </Router> */}
+
+
+    <MainPage/>
     </>
   );
 }

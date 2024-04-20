@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaHeart } from "react-icons/fa";
+import Navbar from  "../components/Navbar";
+import Dashboard from "../components/Dashboard";
+import Sidebar from "../components/Sidebar";
 
 const MainPage = () => {
   // You would manage your state and context here
@@ -24,8 +27,15 @@ const MainPage = () => {
     },
   };
 
+  const [sidebarToggle, setSidebarToggle] = useState<boolean>(true)
   return (
     <div>
+           <div className="flex">
+      <Sidebar sidebarToggle={sidebarToggle}/>
+      <Dashboard sidebarToggle={sidebarToggle}
+                 setSidebarToggle={setSidebarToggle}/>
+    </div>
+
       <div className="w-full flex justify-around p-4">
         <div className="relative mr-2">
           <input
