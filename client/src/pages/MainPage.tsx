@@ -5,9 +5,15 @@ import { FaHeart } from "react-icons/fa";
 import Navbar from  "../components/Navbar";
 import Dashboard from "../components/Dashboard";
 import Sidebar from "../components/Sidebar";
+import ChatBotPage from "./ChatBotPage";
 
 const MainPage = () => {
   // You would manage your state and context here
+  const [visibleChatBot, setVisibleChatBot] = useState(false)
+
+  const toggleChatBot = () =>{
+    setVisibleChatBot(!visibleChatBot)
+  }
 
   const responsive = {
     desktop: {
@@ -51,7 +57,7 @@ const MainPage = () => {
             />
           </div>
         </div>
-        <button className="flex items-center bg-semiwhite text-black pr-6 pl-3 py-2 rounded-md">
+        <button className="flex items-center bg-semiwhite text-black pr-6 pl-3 py-2 rounded-md" onClick={toggleChatBot}>
           <span className="pr-2">Chatbot</span>
           <img
             src="./src/assets/chatbot.png"
@@ -323,6 +329,7 @@ const MainPage = () => {
           </div>
         </Carousel>
       </div>
+      <ChatBotPage visible = {visibleChatBot} toggleChatBot = {toggleChatBot}/>
     </div>
   );
 };

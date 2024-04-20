@@ -26,8 +26,11 @@ function App() {
   return (
     <>
        {/* <Router>
+  return (
+    <>
+       <Router>
       <Routes>
-        <Route path="/" element={<PaymentPage />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/payment-form" element={<PaymentForm />} />
         <Route path="/payment-success" element={<PaymentSuccessPage />} />
       </Routes>
@@ -35,6 +38,7 @@ function App() {
 
 
     <MainPage/>
+
     </>
   );
 }
