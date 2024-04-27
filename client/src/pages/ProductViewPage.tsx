@@ -22,9 +22,9 @@ export default function ProductViewPage() {
         />
 
         <div className="flex gap-x-4 mt-8 justify-center">
-          <button className=" p-2 bg-purple-300 w-12 rounded">-1</button>
+          <button className=" p-2 bg-purple-300 w-12 rounded">-</button>
           <span className="border p-2  w-12 rounded text-center">1</span>
-          <button className=" p-2 bg-purple-300 w-12 rounded">+1</button>
+          <button className=" p-2 bg-purple-300 w-12 rounded">+</button>
         </div>
         <div className="flex  flex-col justify-center items-center mt-8">
           <h2>cost : 50 SR</h2>

@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "darkpurple": "#42316F",
+        "nuetralpurple": "#6750A4",
+        "lightpurple": "#6750A4",
+        "semiwhite": "#F3EDF7",
+      },
+    },
   },
   plugins: [],
 };

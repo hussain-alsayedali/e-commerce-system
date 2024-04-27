@@ -33,20 +33,20 @@ export default function ProductCartCard({
         <div className="flex gap-x-4">
           <button
             onClick={removeUnit}
-            className=" p-2 bg-purple-300 w-12 rounded"
+            className=" p-2 bg-purple-300 w-12 rounded hover:opacity-50"
           >
-            -1
+            -
           </button>
           <span className="border p-2  w-12 rounded text-center">{units}</span>
-          <button onClick={addUnit} className=" p-2 bg-purple-300 w-12 rounded">
-            +1
+          <button onClick={addUnit} className=" p-2 bg-purple-300 w-12 rounded hover:opacity-50">
+            +
           </button>
         </div>
         <div className="flex gap-8">
-          <button>
+          <button className="hover:opacity-50">
             <FaHeart />
           </button>
-          <button>
+          <button className="hover:opacity-50">
             <FaTrash />
           </button>
         </div>

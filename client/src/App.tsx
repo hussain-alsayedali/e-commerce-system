@@ -1,20 +1,44 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import SignupPage from "./pages/SignupPage.tsx";
-import SigninPage from "./pages/SinginPage.tsx";
-import ShoppingCartPage from "./pages/ShoppingCartPage.tsx";
-import ProductViewPage from "./pages/ProductViewPage.tsx";
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import MainPage from "./pages/MainPage";
+import SignupPage from "./pages/SignupPage";
+import SigninPage from "./pages/SinginPage";  // Corrected the typo in the import
+import ShoppingCartPage from "./pages/ShoppingCartPage";
+import ProductViewPage from "./pages/ProductViewPage";
+import PaymentSuccessPage from "./pages/PaymentSuccessPage";
+
+import Dashboard from "./components/Dashboard";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import PaymentForm from './components/PaymentForm';
+import PaymentPage from "./pages/PaymentPage";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [sidebarToggle, setSidebarToggle] = useState<boolean>(true);
 
   return (
-    <>
-      <ProductViewPage />
-    </>
+    <Router>
+      <Sidebar sidebarToggle={sidebarToggle} role="user"/>
+      <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/signin" element={<SigninPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/paymentpage" element={<PaymentPage />} />
+        <Route path="/paymentsuccess" element={<PaymentSuccessPage />} />
+        <Route path="/productview" element={<ProductViewPage />} />
+        <Route path="/shoppingcart" element={<ShoppingCartPage />} />
+      </Routes>  
+      {/* <Footer/> */}
+    </Router>
+
+
+
+    
   );
 }
 
 export default App;
+
