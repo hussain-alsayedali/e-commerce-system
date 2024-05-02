@@ -7,10 +7,12 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const path = require("path");
 const cors = require("cors");
-
+const mainRoutes = require("./routes/main");
 app.use(
   cors({
-    origin: "*",
+    origin: "*", // or specify the domains you want to allow
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 require("dotenv").config();
@@ -26,10 +28,10 @@ app.use(
   express.urlencoded({ extended: true, limit: "50mb", parameterLimit: 50000 })
 );
 
-app.use(logger("dev"));
-
 //Use forms for put / delete
-app.use(methodOverride("_method"));
+// app.use(methodOverride("_method"));
+
+app.use("/", mainRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {
