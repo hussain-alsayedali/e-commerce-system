@@ -51,4 +51,4 @@ CustomerSchema.methods.comparePassword = function comparePassword(
   });
 };
 
-module.exports = mongoose.model("Admin", CustomerSchema);
+module.exports = mongoose.model("Customer", CustomerSchema);

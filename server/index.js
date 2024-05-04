@@ -8,6 +8,7 @@ const connectDB = require("./config/database");
 const path = require("path");
 const cors = require("cors");
 const mainRoutes = require("./routes/main");
+const productRoutes = require("./routes/product");
 app.use(
   cors({
     origin: "*", // or specify the domains you want to allow
@@ -15,9 +16,18 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+const Category = require("./models/Category");
+const Cart = require("./models/Cart");
+const Admin = require("./models/Admin");
+const Customer = require("./models/Customer");
+const Product = require("./models/Product");
+const ProductOption = require("./models/ProductOption");
+
 require("dotenv").config();
 
 connectDB();
+app.use(logger("dev"));
 
 //Static Folder
 app.use(express.static("public"));
@@ -31,8 +41,24 @@ app.use(
 //Use forms for put / delete
 // app.use(methodOverride("_method"));
 
-app.use("/", mainRoutes);
+function pop() {
+  const admin = new Admin({
+    name: "moha",
+    userName: "admin",
+    password: "admin",
+  });
 
+  try {
+    admin.save();
+  } catch (e) {
+    console.log(e);
+  }
+
+  console.log("saved");
+}
+// pop();
+app.use("/", mainRoutes);
+app.use("/product", productRoutes);
 //Server Running
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
