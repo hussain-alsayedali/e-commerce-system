@@ -75,7 +75,7 @@ export default function Contactus() {
           ></textarea>
         </div>
         <div className="text-center">
-        <button className="bg-purple-800 text-white border-2 border-purple-800 hover:opacity-50 font-bold py-2 px-4 rounded" onClick={handleSubmit}>
+        <button className="bg-purple-800 text-white border-2 border-purple-800 hover:opacity-50 font-bold py-2 px-4 rounded">
         Send
         </button>
 
