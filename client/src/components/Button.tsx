@@ -1,13 +1,18 @@
+import React from 'react';
+
 interface props {
   /** The text to display inside the button */
   title: string;
-  /** Whether the button can be interacted with */
+  /** Optional button type, defaults to 'button' */
+  type?: 'button' | 'submit' | 'reset';
 }
-// md:px-8 md:w-auto
-export default function Button({ title }: props) {
+
+const Button: React.FC<props> = ({ title, type = 'button' }) => {
   return (
-    <button className="bg-purple-800 text-white rounded-lg w-full py-2 px-2 hover:opacity-50  ">
+    <button type={type} className="bg-purple-800 text-white rounded-lg w-full py-2 px-2 hover:opacity-50">
       {title}
     </button>
   );
-}
+};
+
+export default Button;
