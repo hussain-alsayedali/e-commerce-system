@@ -14,6 +14,7 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import PaymentForm from './components/PaymentForm';
 import PaymentPage from "./pages/PaymentPage";
+import Contactus from "./pages/Contactus";
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState<boolean>(true);
@@ -30,6 +31,7 @@ function App() {
         <Route path="/paymentsuccess" element={<PaymentSuccessPage />} />
         <Route path="/productview" element={<ProductViewPage />} />
         <Route path="/shoppingcart" element={<ShoppingCartPage />} />
+        <Route path="/contactus" element={<Contactus />} />
       </Routes>  
       {/* <Footer/> */}
     </Router>

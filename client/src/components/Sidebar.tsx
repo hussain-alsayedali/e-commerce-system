@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBars, FaHeadset, FaChartBar, FaBox, FaHistory, FaHeart, FaTruck } from 'react-icons/fa';
+import { FaBars, FaHeadset, FaChartBar, FaBox, FaHistory, FaHeart, FaTruck, FaHome } from 'react-icons/fa';
 
 type Props = {
   sidebarToggle: boolean;
@@ -8,17 +8,18 @@ type Props = {
 
 function Sidebar({ sidebarToggle, role }: Props) {
   const adminItems = [
+    { name: 'Home', icon: FaHome, link: "/" },
     { name: 'Products', icon: FaBox, link: "productview" },
-    { name: 'Customer Service', icon: FaHeadset, link: "#" },
-    { name: 'Dashboard', icon: FaChartBar, link: "#" },
+    { name: 'Dashboard', icon: FaChartBar, link: "/" },
   ];
 
   const userItems = [
+    { name: 'Home', icon: FaHome, link: "/" },
     { name: 'Orders', icon: FaBox, link: "/" },
     { name: 'History', icon: FaHistory, link: "/" },
     { name: 'Favorite', icon: FaHeart , link: "/" },
     { name: 'Order Tracker', icon: FaTruck, link: "/" },
-    { name: 'Contact us', icon: FaHeadset, link: "/"},
+    { name: 'Contact us', icon: FaHeadset, link: "/contactus"},
   ];
 
   const itemsToRender = role === 'admin' ? adminItems : userItems;
