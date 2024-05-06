@@ -5,7 +5,7 @@ import { FaHeart } from "react-icons/fa";
 import Navbar from  "../components/Navbar";
 import Dashboard from "../components/Dashboard";
 import Sidebar from "../components/Sidebar";
-import ChatBotPage from "./ChatBotPage";
+// import ChatBotPage from "./ChatBotPage";
 
 const MainPage = () => {
   // You would manage your state and context here
@@ -328,7 +328,7 @@ const MainPage = () => {
           </div>
         </Carousel>
       </div>
-      <ChatBotPage visible = {visibleChatBot} toggleChatBot = {toggleChatBot}/>
+      {/* <ChatBotPage visible = {visibleChatBot} toggleChatBot = {toggleChatBot}/> */}
     </div>
   );
 };

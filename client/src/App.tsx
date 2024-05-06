@@ -1,46 +1,41 @@
-import { useState } from "react";
-import React from "react";
+import React, { useState } from "react"; // Properly combined React imports
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import MainPage from "./pages/MainPage";
 import SignupPage from "./pages/SignupPage";
-import SigninPage from "./pages/SinginPage";  // Corrected the typo in the import
+import SigninPage from "./pages/SigninPage";
 import ShoppingCartPage from "./pages/ShoppingCartPage";
 import ProductViewPage from "./pages/ProductViewPage";
 import PaymentSuccessPage from "./pages/PaymentSuccessPage";
-
+import UserProfile from "./pages/UserProfile"; // Importing UserProfile component
 import Dashboard from "./components/Dashboard";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import PaymentForm from './components/PaymentForm';
 import PaymentPage from "./pages/PaymentPage";
 import Contactus from "./pages/Contactus";
 
 function App() {
-  const [sidebarToggle, setSidebarToggle] = useState<boolean>(true);
+  const [sidebarToggle, setSidebarToggle] = useState(true);
 
   return (
-    <Router>
-      <Sidebar sidebarToggle={sidebarToggle} role="user"/>
-      <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/signin" element={<SigninPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/paymentpage" element={<PaymentPage />} />
-        <Route path="/paymentsuccess" element={<PaymentSuccessPage />} />
-        <Route path="/productview" element={<ProductViewPage />} />
-        <Route path="/shoppingcart" element={<ShoppingCartPage />} />
-        <Route path="/contactus" element={<Contactus />} />
-      </Routes>  
-      {/* <Footer/> */}
-    </Router>
-
-
-
-    
+    <React.StrictMode>
+      <Router>
+        <Sidebar sidebarToggle={sidebarToggle} role="user"/>
+        <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/signin" element={<SigninPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/paymentpage" element={<PaymentPage />} />
+          <Route path="/paymentsuccess" element={<PaymentSuccessPage />} />
+          <Route path="/productview" element={<ProductViewPage />} />
+          <Route path="/shoppingcart" element={<ShoppingCartPage />} />
+          <Route path="/contactus" element={<Contactus />} />
+          <Route path="/userprofile" element={<UserProfile />} /> {/* Added UserProfile route */}
+        </Routes>
+        <Footer/>
+      </Router>
+    </React.StrictMode>
   );
 }
 
 export default App;
-
