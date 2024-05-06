@@ -1,14 +1,14 @@
 import React from 'react'
 
-export default function Message({text, agent}: {text: string, agent: number}) {
+export default function Message({text, agent}: {text: string, agent: string}) {
   const commonClasses = "text-semiwhite mx-w-[600px] w-9/12 break-words p-3 rounded-bl-lg rounded-br-lg"
-  if(agent ===0)
+  if(agent ==="admin")
     return (
       <div className={`bg-gray-400 ${commonClasses} rounded-tl-lg`}>
         <p>{text}</p>
       </div>
     )
-  else if(agent === 1){
+  else if(agent === "user"){
     return (
       <div className={`bg-lightpurple ${commonClasses} justify-end rounded-tr-lg`}>
         <p>{text}</p>
