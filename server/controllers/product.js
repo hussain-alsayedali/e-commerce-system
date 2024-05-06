@@ -1,5 +1,6 @@
 const Product = require("../models/Product");
 const Category = require("../models/Category");
+const cloudinary = require("../middleware/cloudinary");
 exports.test = (req, res) => {
   res.json("mseow");
 };

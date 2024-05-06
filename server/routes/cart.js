@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const cartController = require("../controllers/cart");
-const verifyToken = require("../middleware/auth");
+const { verifyTokenCustomer } = require("../middleware/auth");
 router.post("/addProductToCart", verifyToken, cartController.addProductToCart);
 router.post(
   "/deleteProductFromCart",
@@ -15,4 +15,15 @@ router.post(
   cartController.updateQuantityOfCart
 );
 
+router.get(
+  "/getInactiveCarts",
+  verifyTokenCustomer,
+  cartController.getInactiveCarts
+);
+
+router.getCurrentCart(
+  "/getCurrentCart",
+  verifyTokenCustomer,
+  cartController.getCurrentCart
+);
 module.exports = router;

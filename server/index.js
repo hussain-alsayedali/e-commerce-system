@@ -9,6 +9,8 @@ const path = require("path");
 const cors = require("cors");
 const mainRoutes = require("./routes/main");
 const productRoutes = require("./routes/product");
+const adminRoutes = require("./routes/admin");
+
 app.use(
   cors({
     origin: "*", // or specify the domains you want to allow
@@ -57,8 +59,10 @@ function pop() {
   console.log("saved");
 }
 // pop();
+
 app.use("/", mainRoutes);
 app.use("/product", productRoutes);
+app.use("/admin", adminRoutes);
 //Server Running
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
