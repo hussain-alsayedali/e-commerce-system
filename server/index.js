@@ -10,7 +10,7 @@ const cors = require("cors");
 const mainRoutes = require("./routes/main");
 const productRoutes = require("./routes/product");
 const adminRoutes = require("./routes/admin");
-const adminRoutes = require("./routes/cart");
+const cartRoutes = require("./routes/cart");
 
 app.use(
   cors({

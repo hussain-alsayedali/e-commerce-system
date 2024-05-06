@@ -1,4 +1,4 @@
-export function verifyTokenCustomer(req, res, next) {
+exports.verifyTokenCustomer = (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
 
   if (!token) {
@@ -18,8 +18,8 @@ export function verifyTokenCustomer(req, res, next) {
   }
 
   next();
-}
-export function verifyTokenAdmin(req, res, next) {
+};
+exports.verifyTokenAdmin = (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
 
   if (!token) {
@@ -39,4 +39,4 @@ export function verifyTokenAdmin(req, res, next) {
   }
 
   next();
-}
+};
