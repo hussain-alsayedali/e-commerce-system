@@ -10,6 +10,7 @@ const cors = require("cors");
 const mainRoutes = require("./routes/main");
 const productRoutes = require("./routes/product");
 const adminRoutes = require("./routes/admin");
+const adminRoutes = require("./routes/cart");
 
 app.use(
   cors({
@@ -63,6 +64,7 @@ function pop() {
 app.use("/", mainRoutes);
 app.use("/product", productRoutes);
 app.use("/admin", adminRoutes);
+app.use("/cart", cartRoutes);
 //Server Running
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
