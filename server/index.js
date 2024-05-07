@@ -7,6 +7,8 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const path = require("path");
 const cors = require("cors");
+
+const userRoutes = require("./routes/user");
 const mainRoutes = require("./routes/main");
 const productRoutes = require("./routes/product");
 const adminRoutes = require("./routes/admin");
@@ -65,6 +67,7 @@ app.use("/", mainRoutes);
 app.use("/product", productRoutes);
 app.use("/admin", adminRoutes);
 app.use("/cart", cartRoutes);
+app.use("/user", userRoutes);
 //Server Running
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
