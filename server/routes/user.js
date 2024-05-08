@@ -2,7 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 const userController = require("../controllers/user");
-
-router.get("/getCurrentUser", userController.getCurrentUser);
+const { verifyTokenCustomer } = require("../middleware/auth");
+router.get(
+  "/getCurrentUser",
+  verifyTokenCustomer,
+  userController.getCurrentUser
+);
 
 module.exports = router;
