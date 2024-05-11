@@ -13,6 +13,7 @@ const mainRoutes = require("./routes/main");
 const productRoutes = require("./routes/product");
 const adminRoutes = require("./routes/admin");
 const cartRoutes = require("./routes/cart");
+const noteRoutes = require("./routes/cart");
 
 app.use(
   cors({
@@ -68,6 +69,7 @@ app.use("/product", productRoutes);
 app.use("/admin", adminRoutes);
 app.use("/cart", cartRoutes);
 app.use("/user", userRoutes);
+app.use("/note", noteRoutes);
 //Server Running
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
