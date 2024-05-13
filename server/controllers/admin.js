@@ -29,20 +29,26 @@ exports.addProduct = async (req, res) => {
 };
 
 exports.addCategory = async (req, res) => {
-  const { name } = req.body;
+  console.log("test ")
+  const { categoryName } = req.body;
   try {
-    const category = await Category.findOne({ name: name });
+    const category = await Category.findOne({ name: categoryName });
+    console.log(category)
 
     if (category) {
-      throw new Error(`Category ${name} already exists`);
+      console.log("category is already exist")
+      throw new Error(`Category ${categoryName} already exists`);
     }
     const newCategory = await Category({
-      name: name,
+      name: categoryName,
     });
     await newCategory.save();
+    console.log("done")
     res.status(201).json("success");
+    
   } catch (e) {
-    console.log(e);
+    console.log("ff")
+    res.status(404).json("failed");
   }
 };
 exports.addProductToCategory = async (req, res) => {

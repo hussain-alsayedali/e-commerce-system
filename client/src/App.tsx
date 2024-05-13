@@ -12,6 +12,8 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import PaymentPage from "./pages/PaymentPage";
 import Contactus from "./pages/Contactus";
+import AddProduct from "./pages/AddProduct"
+import AddCategory from "./pages/AddCategory"
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
@@ -19,7 +21,7 @@ function App() {
   return (
     <React.StrictMode>
       <Router>
-        <Sidebar sidebarToggle={sidebarToggle} role="user"/>
+        <Sidebar sidebarToggle={sidebarToggle} role="admin"/>
         <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
         <Routes>
           <Route path="/" element={<MainPage />} />
@@ -30,6 +32,9 @@ function App() {
           <Route path="/productview" element={<ProductViewPage />} />
           <Route path="/shoppingcart" element={<ShoppingCartPage />} />
           <Route path="/contactus" element={<Contactus />} />
+          <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/addcategory" element={<AddCategory />} />
+          
           <Route path="/userprofile" element={<UserProfile />} /> {/* Added UserProfile route */}
         </Routes>
         <Footer/>
