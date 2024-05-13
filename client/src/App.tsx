@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import PaymentPage from "./pages/PaymentPage";
 import Contactus from "./pages/Contactus";
 import AddProduct from "./pages/AddProduct"
-import AddCategory from "./pages/AddCategory"
+// import AddCategory from "./pages/AddCategory"
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
@@ -33,8 +33,8 @@ function App() {
           <Route path="/shoppingcart" element={<ShoppingCartPage />} />
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/addproduct" element={<AddProduct />} />
-          <Route path="/addcategory" element={<AddCategory />} />
-          
+          {/* <Route path="/addcategory" element={<AddCategory />} /> */}
+
           <Route path="/userprofile" element={<UserProfile />} /> {/* Added UserProfile route */}
         </Routes>
         <Footer/>
