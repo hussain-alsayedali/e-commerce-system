@@ -13,7 +13,8 @@ const mainRoutes = require("./routes/main");
 const productRoutes = require("./routes/product");
 const adminRoutes = require("./routes/admin");
 const cartRoutes = require("./routes/cart");
-const noteRoutes = require("./routes/cart");
+const noteRoutes = require("./routes/note"); // Make sure this is pointing to the right file.
+
 const chatRoutes = require("./routes/chat");
 app.use(
   cors({
