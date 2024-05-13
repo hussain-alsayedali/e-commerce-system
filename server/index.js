@@ -14,7 +14,7 @@ const productRoutes = require("./routes/product");
 const adminRoutes = require("./routes/admin");
 const cartRoutes = require("./routes/cart");
 const noteRoutes = require("./routes/cart");
-
+const chatRoutes = require("./routes/chat");
 app.use(
   cors({
     origin: "*", // or specify the domains you want to allow
@@ -70,6 +70,7 @@ app.use("/admin", adminRoutes);
 app.use("/cart", cartRoutes);
 app.use("/user", userRoutes);
 app.use("/note", noteRoutes);
+app.use("/chat", chatRoutes);
 //Server Running
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
