@@ -14,7 +14,7 @@ import PaymentPage from "./pages/PaymentPage";
 import Products from "./pages/Products";
 import Contactus from "./pages/Contactus";
 import AddProduct from "./pages/AddProduct"
-import AddCategory from "./pages/AddCategory"
+
 import NewMainPage from "./pages/NewMainPage"
 import AdminNewMainPage from "./pages/AdminNewMainPage"
 function App() {

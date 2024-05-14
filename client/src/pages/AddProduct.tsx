@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Sidebar from '../components/Sidebar.tsx';
 import Dashboard from '../components/Dashboard.tsx';
 import instance from "../api/axios.ts";
+import { useNavigate } from 'react-router-dom';
+
 
 
 function ProductForm() {
@@ -9,6 +11,7 @@ function ProductForm() {
     const [description, setDescription] = useState('');
     const [productPrice, setProductPrice] = useState('');
     const [categoryName, setCategoryName] = useState('')
+    const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
 
@@ -26,6 +29,7 @@ function ProductForm() {
         })
         .then((response) => {
             alert("Product is added successfully");
+            navigate("/adminmainpage")
         })
         .catch((error) => {
           console.error("Login error:", error);

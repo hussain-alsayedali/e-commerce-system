@@ -19,6 +19,7 @@ function Sidebar({ sidebarToggle, role }: Props) {
   const adminItems = [
     { name: "Home", icon: FaHome, link: "/" },
     { name: "Products", icon: FaBox, link: "productspage" },
+    { name: "Admin Items", icon: FaBox, link: "addproduct" },
     { name: "Dashboard", icon: FaChartBar, link: "/" },
   ];
 
