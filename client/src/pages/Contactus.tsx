@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import Sidebar from '../components/Sidebar.tsx';
+import Dashboard from '../components/Dashboard.tsx';
 
 export default function Contactus() {
 
@@ -29,7 +31,12 @@ export default function Contactus() {
         })
         .catch(err => setStatus("Message cannot be sent, you can try later:("))
     };
-  return (
+    
+  const [sidebarToggle, setSidebarToggle] = useState(true);
+    return (
+      <>
+      <Sidebar sidebarToggle={sidebarToggle} role="user"/>
+      <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
 <div className="container mx-auto p-4 mt-10">
       <h1 className="text-3xl text-center mb-4">Contact Us</h1>
       <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
@@ -83,5 +90,6 @@ export default function Contactus() {
         </div>
       </form>
     </div>
+    </>
   )
 }

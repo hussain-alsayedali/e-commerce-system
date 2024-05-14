@@ -42,6 +42,18 @@ function classNames(...classes: string[]) {
 }
 
 export default function Popular() {
+  // fetch("http://localhost:7500/user/getTokenType")
+  // .then((res) => res.json())
+  // .then((data) => {
+  //   console.log("done")
+  //   console.log(data); // Log the response data
+  // })
+  // .catch((err) => {
+  //   console.log("error")
+  //   console.log(err)
+  // });
+
+
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [visibleChatBot, setVisibleChatBot] = useState(false)
 
@@ -51,7 +63,7 @@ export default function Popular() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
   return (
           <>
-                  <Sidebar sidebarToggle={sidebarToggle} role="user"/>
+                  <Sidebar sidebarToggle={sidebarToggle} role="admin"/>
         <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
           <div className="w-full flex justify-between p-4">
             <div></div>

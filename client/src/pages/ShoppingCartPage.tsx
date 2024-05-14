@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ProductCartCard from "../components/ProductCartCard";
 import Button from "../components/Button";
+import Sidebar from '../components/Sidebar.tsx';
+import Dashboard from '../components/Dashboard.tsx';
 
 export default function ShoppingCartPage() {
   const [cart, setCart] = useState([
@@ -38,7 +40,11 @@ export default function ShoppingCartPage() {
     });
   }
 
+  const [sidebarToggle, setSidebarToggle] = useState(true);
   return (
+    <>
+    <Sidebar sidebarToggle={sidebarToggle} role="user"/>
+    <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
     <div className="flex flex-col align-middle justify-center items-center">
       {cart.map((product, index: any) => {
         return (
@@ -58,5 +64,6 @@ export default function ShoppingCartPage() {
         </a>
       </div>
     </div>
+    </>
   );
 }

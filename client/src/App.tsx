@@ -15,16 +15,18 @@ import Contactus from "./pages/Contactus";
 import AddProduct from "./pages/AddProduct"
 // import AddCategory from "./pages/AddCategory"
 import NewMainPage from "./pages/NewMainPage"
+import AdminNewMainPage from "./pages/AdminNewMainPage"
 function App() {
-  const [sidebarToggle, setSidebarToggle] = useState(true);
+
+
 
   return (
     <React.StrictMode>
       <Router>
-        <Sidebar sidebarToggle={sidebarToggle} role="user"/>
-        <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
+
         <Routes>
           <Route path="/" element={<NewMainPage />} />
+          <Route path="/adminmainpage" element={<AdminNewMainPage />} />
           <Route path="/signin" element={<SigninPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/paymentpage" element={<PaymentPage />} />
