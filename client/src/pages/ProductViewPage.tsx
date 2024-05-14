@@ -1,7 +1,14 @@
 import Button from "../components/Button";
 import { FaHeart, FaTrash } from "react-icons/fa";
+import { useState } from 'react';
+import Sidebar from '../components/Sidebar.tsx';
+import Dashboard from '../components/Dashboard.tsx';
 export default function ProductViewPage() {
+  const [sidebarToggle, setSidebarToggle] = useState(true);
   return (
+    <>
+    <Sidebar sidebarToggle={sidebarToggle} role="user"/>
+    <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
     <div className="flex flex-col items-center justify-center align-middle mt-8">
       <div className="flex flex-col w-11/12">
         <div className="flex justify-between ">
@@ -39,5 +46,6 @@ export default function ProductViewPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

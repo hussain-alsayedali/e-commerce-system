@@ -3,9 +3,10 @@ const router = express.Router();
 
 const adminController = require("../controllers/admin");
 const { verifyTokenAdmin } = require("../middleware/auth");
+// const { upload } = require("../middleware/multer");
 
-router.post("/addProduct", adminController.addProduct);
-router.post("/addCategory", adminController.addCategory);
+router.post("/addProduct",verifyTokenAdmin, adminController.addProduct);
+router.post("/addCategory",verifyTokenAdmin, adminController.addCategory);
 router.post("/addOption", verifyTokenAdmin, adminController.addOption);
 router.post(
   "/addProductToCategory",

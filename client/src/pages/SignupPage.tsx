@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import instance from "../api/axios.ts";
+import Dashboard from '../components/Dashboard'
+import Sidebar from '../components/Sidebar'
 
 export default function SignupPage() {
   const [form, setForm] = useState({
@@ -52,7 +54,12 @@ export default function SignupPage() {
     });
   };
 
+  const [sidebarToggle, setSidebarToggle] = useState(true);
+
   return (
+    <>
+    <Sidebar sidebarToggle={sidebarToggle} role="user"/>
+    <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
     <div className="flex justify-center">
       <div className="mt-52 mr-16 ml-16 rounded w-2/3 lg:w-1/4 h-[600px] bg-semiwhite">
         <div className="flex flex-col justify-center items-center">
@@ -113,5 +120,6 @@ export default function SignupPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
