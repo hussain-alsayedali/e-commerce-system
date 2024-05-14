@@ -26,8 +26,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 <h2 className="font-semibold text-lg">{product.name}</h2>
                 <p className="text-gray-400">{product.keywords}</p>
                 <p className="text-gray-400">{product.description}</p>
-                <div>
-                    <span>{product.price} SR</span>
+                <div className="flex items-center">
+                    <p className="text-sm font-medium text-gray-900">{product.price} SR</p>
                     <button className="pl-4 pt-1 ">
                         <FaHeart size={16} />
                     </button>
