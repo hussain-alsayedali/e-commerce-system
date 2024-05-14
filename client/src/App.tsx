@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from "./pages/MainPage";
 import SignupPage from "./pages/SignupPage";
 import SigninPage from "./pages/SigninPage";
-import ShoppingCartPage from "./pages/ShoppingCartPage";
+import ShoppingCartPage from "./pages/CheckoutPage";
 import ProductViewPage from "./pages/ProductViewPage";
 import PaymentSuccessPage from "./pages/PaymentSuccessPage";
 import UserProfile from "./pages/UserProfile"; // Importing UserProfile component
@@ -15,18 +15,14 @@ import Contactus from "./pages/Contactus";
 import AddProduct from "./pages/AddProduct"
 // import AddCategory from "./pages/AddCategory"
 import NewMainPage from "./pages/NewMainPage"
-import AdminNewMainPage from "./pages/AdminNewMainPage"
 function App() {
-
-
+  const [sidebarToggle, setSidebarToggle] = useState(true);
 
   return (
     <React.StrictMode>
       <Router>
-
         <Routes>
           <Route path="/" element={<NewMainPage />} />
-          <Route path="/adminmainpage" element={<AdminNewMainPage />} />
           <Route path="/signin" element={<SigninPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/paymentpage" element={<PaymentPage />} />
