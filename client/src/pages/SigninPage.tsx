@@ -36,7 +36,10 @@ export default function SigninPage() {
         localStorage.setItem("token", token);
         if (form.role === "admin") {
           navigate("/adminmainpage");
-        } else {
+
+        }
+        else{
+          console.log("yes")
           navigate("/userprofile");
         }
       })

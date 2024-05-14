@@ -1,7 +1,6 @@
 import React, { useState } from "react"; // Properly combined React imports
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
-import NewMainPage from "./pages/NewMainPage";
 import SignupPage from "./pages/SignupPage";
 import SigninPage from "./pages/SigninPage";
 import ShoppingCartPage from "./pages/CheckoutPage";
@@ -14,20 +13,19 @@ import Footer from "./components/Footer";
 import PaymentPage from "./pages/PaymentPage";
 import Products from "./pages/Products";
 import Contactus from "./pages/Contactus";
-
+import AddProduct from "./pages/AddProduct"
+import AddCategory from "./pages/AddCategory"
+import NewMainPage from "./pages/NewMainPage"
+import AdminNewMainPage from "./pages/AdminNewMainPage"
 function App() {
-  const [sidebarToggle, setSidebarToggle] = useState(true);
 
   return (
     <React.StrictMode>
       <Router>
-        <Sidebar sidebarToggle={sidebarToggle} role="user" />
-        <Dashboard
-          sidebarToggle={sidebarToggle}
-          setSidebarToggle={setSidebarToggle}
-        />
+
         <Routes>
           <Route path="/" element={<NewMainPage />} />
+          <Route path="/adminmainpage" element={<AdminNewMainPage />} />
           <Route path="/signin" element={<SigninPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/paymentpage" element={<PaymentPage />} />
@@ -36,8 +34,10 @@ function App() {
           <Route path="/productspage" element={<Products />} />
           <Route path="/shoppingcart" element={<ShoppingCartPage />} />
           <Route path="/contactus" element={<Contactus />} />
-          <Route path="/userprofile" element={<UserProfile />} />{" "}
-          {/* Added UserProfile route */}
+          <Route path="/addproduct" element={<AddProduct />} />
+          {/* <Route path="/addcategory" element={<AddCategory />} /> */}
+
+          <Route path="/userprofile" element={<UserProfile />} /> {/* Added UserProfile route */}
         </Routes>
         <Footer />
       </Router>

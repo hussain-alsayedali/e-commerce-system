@@ -11,6 +11,7 @@ interface UserProfile {
 }
 
 const UserProfile = () => {
+  console.log("1")
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [error, setError] = useState<string>("");
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ const UserProfile = () => {
 
   const [sidebarToggle, setSidebarToggle] = useState(true);
   return (
-<>
+  <>
     <Sidebar sidebarToggle={sidebarToggle} role="user"/>
     <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
     <div style={{ maxWidth: "1300px", margin: "20px auto", padding: "20px", boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}>
@@ -59,7 +60,7 @@ const UserProfile = () => {
       <p><strong>Email:</strong> {userProfile.email}</p>
       {userProfile.id && <p><strong>User ID:</strong> {userProfile.id}</p>}
     </div>
-</>
+  </>
   );
 };
 

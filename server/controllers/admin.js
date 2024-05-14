@@ -7,21 +7,25 @@ const cloudinary = require("../middleware/cloudinary");
 exports.addProduct = async (req, res) => {
   console.log("ghghg")
   console.log(req.body)
-  const { name, description, price} = req.body;
+  const { name, description, price, categoryName} = req.body;
+  console.log(name)
+  console.log(description)
+  console.log(price)
+  console.log(categoryName)
   // const result = await cloudinary.uploader.upload(req.file.path);
   try {
-    // const category = await Category.findOne({ name: categoryname });
+    const category = await Category.findOne({ name: categoryName });
 
-    // if (!category) {
-    //   throw new Error(`Category ${categoryName} not found`);
-    // }
+    if (!category) {
+      throw new Error(`Category ${categoryName} not found`);
+    }
     const product = await Product({
       name: name,
       Description: description,
       price: price,
       // image: result.secure_url,
       // cloudinaryId: result.public_id,
-      // category: category._id,
+      category: category._id
     });
     await product.save();
     res.status(201).json("success");
