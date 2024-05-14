@@ -42,9 +42,8 @@ Run the following command to install the required dependencies:
 npm install
 
 Running the Development Server
-Once the dependencies are installed, start the development server by running:
+Once the dependencies are installed, start the development server by running: npm run dev
 
-npm run dev
 This command will launch the development server and make the application accessible in your web browser.
 
 That's it! You can now start exploring and working with the project locally.
