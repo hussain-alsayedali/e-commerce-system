@@ -7,7 +7,7 @@ const ProductSchema = new mongoose.Schema({
   image: { type: String },
   cloudinaryId: {
     type: String,
-    require: true,
+    // require: true,
   },
   options: {
     type: [mongoose.Schema.Types.ObjectId],

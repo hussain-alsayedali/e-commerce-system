@@ -1,9 +1,10 @@
 import React, { useState } from "react"; // Properly combined React imports
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
+import NewMainPage from "./pages/NewMainPage";
 import SignupPage from "./pages/SignupPage";
 import SigninPage from "./pages/SigninPage";
-import ShoppingCartPage from "./pages/ShoppingCartPage";
+import ShoppingCartPage from "./pages/CheckoutPage";
 import ProductViewPage from "./pages/ProductViewPage";
 import PaymentSuccessPage from "./pages/PaymentSuccessPage";
 import UserProfile from "./pages/UserProfile"; // Importing UserProfile component
