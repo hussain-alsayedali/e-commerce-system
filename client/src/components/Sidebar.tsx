@@ -18,7 +18,7 @@ type Props = {
 function Sidebar({ sidebarToggle, role }: Props) {
   const adminItems = [
     { name: "Home", icon: FaHome, link: "/" },
-    { name: "Products", icon: FaBox, link: "productview" },
+    { name: "Products", icon: FaBox, link: "productspage" },
     { name: "Dashboard", icon: FaChartBar, link: "/" },
   ];
 
@@ -27,7 +27,7 @@ function Sidebar({ sidebarToggle, role }: Props) {
     { name: "Orders", icon: FaBox, link: "/" },
     { name: "History", icon: FaHistory, link: "/" },
     { name: "Favorite", icon: FaHeart, link: "/" },
-    { name: "Products", icon: FaBox, link: "products" },
+    { name: "Products", icon: FaBox, link: "/productspage" },
     { name: "Order Tracker", icon: FaTruck, link: "/" },
     { name: "Contact us", icon: FaHeadset, link: "/contactus" },
   ];

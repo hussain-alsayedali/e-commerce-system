@@ -12,6 +12,7 @@ import Dashboard from "./components/Dashboard";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import PaymentPage from "./pages/PaymentPage";
+import Products from "./pages/Products";
 import Contactus from "./pages/Contactus";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/paymentpage" element={<PaymentPage />} />
           <Route path="/paymentsuccess" element={<PaymentSuccessPage />} />
           <Route path="/productview" element={<ProductViewPage />} />
+          <Route path="/productspage" element={<Products />} />
           <Route path="/shoppingcart" element={<ShoppingCartPage />} />
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/userprofile" element={<UserProfile />} />{" "}
