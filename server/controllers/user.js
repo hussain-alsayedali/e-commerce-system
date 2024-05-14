@@ -11,11 +11,3 @@ exports.getCurrentUser = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
-
-exports.getTokenType = async (req, res) => {
-  try {
-    res.json(req.user);
-  } catch (e) {
-    res.err(500).json({ message: "Server error" });
-  }
-};
