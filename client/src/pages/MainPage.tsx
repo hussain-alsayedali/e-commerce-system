@@ -5,6 +5,7 @@ import { FaHeart } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Dashboard from "../components/Dashboard";
 import Sidebar from "../components/Sidebar";
+import ProductCard from "../components/ProductCard";
 // import ChatBotPage from "./ChatBotPage";
 
 const MainPage = () => {
@@ -32,6 +33,11 @@ const MainPage = () => {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
+    const products = [
+        { id: 1, name: "Product One", image: "./src/assets/product1.png", description: "Description for Product One", price: 50, keywords: "eco, green" },
+        { id: 2, name: "Product Two", image: "./src/assets/product2.png", description: "Description for Product Two", price: 75, keywords: "tech, modern" },
+        { id: 3, name: "Product Three", image: "./src/assets/product3.png", description: "Description for Product Three", price: 100, keywords: "health, fitness" }
+    ];
 
   return (
     <div>
@@ -73,169 +79,13 @@ const MainPage = () => {
       </div>
       <div className="pl-20">
         <Carousel responsive={responsive} className="py-10">
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+            <Carousel responsive={responsive}>
+                {products.map(product => (
+                    <ProductCard key={product.id} product={product} />
+                ))}
+            </Carousel>
         </Carousel>
-        <Carousel responsive={responsive} className="">
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Carousel>
+
       </div>
       <div className="bg-lightpurple w-full flex justify-between p-4 mt-10">
         <div></div>
@@ -245,88 +95,11 @@ const MainPage = () => {
         <button className=" bg-nuetralpurple w-[60px] text-center text-white px-4 py-2 ml-14 rounded-md"></button>
       </div>
       <div className="pl-20">
-        <Carousel responsive={responsive} className="py-10">
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center align-middle py-4 border-2 border-black w-44 rounded-md">
-            <div className="flex flex-col">
-              <img
-                className="aspect-[16/9] h-24 object-contain"
-                src="./src/assets/emptycart.png"
-                alt=""
-              />
-              <div className="flex  flex-col justify-center items-center mt-4">
-                <h2 className="font-semibold text-lg">Product Name</h2>
-                <p className="text-gray-400">key words</p>
-                <p className="text-gray-400">description</p>
-                <div>
-                  <span className="">50 SR</span>
-                  <button className="pl-4 pt-1">
-                    <FaHeart size={16} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Carousel>
+                   <Carousel responsive={responsive}>
+                {products.map(product => (
+                    <ProductCard key={product.id} product={product} />
+                ))}
+            </Carousel>
       </div>
       {/* <ChatBotPage visible = {visibleChatBot} toggleChatBot = {toggleChatBot}/> */}
     </div>

@@ -12,7 +12,6 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import PaymentPage from "./pages/PaymentPage";
 import Contactus from "./pages/Contactus";
-import Products from "./pages/Products";
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
@@ -26,7 +25,7 @@ function App() {
           setSidebarToggle={setSidebarToggle}
         />
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<NewMainPage />} />
           <Route path="/signin" element={<SigninPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/paymentpage" element={<PaymentPage />} />
@@ -36,7 +35,6 @@ function App() {
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/userprofile" element={<UserProfile />} />{" "}
           {/* Added UserProfile route */}
-          <Route path="/products" element={<Products />} />{" "}
         </Routes>
         <Footer />
       </Router>
