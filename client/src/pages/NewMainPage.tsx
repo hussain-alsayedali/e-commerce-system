@@ -6,7 +6,7 @@ import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from
 import Product from "../components/Products"
 import Dashboard from '../components/Dashboard'
 import Sidebar from '../components/Sidebar'
-// import ChatBotPage from "../pages/ChatBotPage";
+import ChatBotPage from "../pages/ChatBotPage";
 const sortOptions = [
   { name: 'Most Popular', href: '#', current: true },
   { name: 'Best Rating', href: '#', current: false },
@@ -75,7 +75,7 @@ export default function Popular() {
           className="w-6 h-6" />
       </button>
     </div>
-          {/* <ChatBotPage visible = {visibleChatBot} toggleChatBot = {toggleChatBot}/> */}
+          <ChatBotPage visible = {visibleChatBot} toggleChatBot = {toggleChatBot}/>
 
       {/*  ----------------------------------------------- */}
       <div className="bg-white">
