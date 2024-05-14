@@ -1,5 +1,5 @@
 import React, { useState } from "react"; // Properly combined React imports
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import SignupPage from "./pages/SignupPage";
 import SigninPage from "./pages/SigninPage";
@@ -12,6 +12,7 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import PaymentPage from "./pages/PaymentPage";
 import Contactus from "./pages/Contactus";
+import Products from "./pages/Products";
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
@@ -19,8 +20,11 @@ function App() {
   return (
     <React.StrictMode>
       <Router>
-        <Sidebar sidebarToggle={sidebarToggle} role="user"/>
-        <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
+        <Sidebar sidebarToggle={sidebarToggle} role="user" />
+        <Dashboard
+          sidebarToggle={sidebarToggle}
+          setSidebarToggle={setSidebarToggle}
+        />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/signin" element={<SigninPage />} />
@@ -30,9 +34,11 @@ function App() {
           <Route path="/productview" element={<ProductViewPage />} />
           <Route path="/shoppingcart" element={<ShoppingCartPage />} />
           <Route path="/contactus" element={<Contactus />} />
-          <Route path="/userprofile" element={<UserProfile />} /> {/* Added UserProfile route */}
+          <Route path="/userprofile" element={<UserProfile />} />{" "}
+          {/* Added UserProfile route */}
+          <Route path="/products" element={<Products />} />{" "}
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </React.StrictMode>
   );

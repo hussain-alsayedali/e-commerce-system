@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaHeart } from "react-icons/fa";
-import Navbar from  "../components/Navbar";
+import Navbar from "../components/Navbar";
 import Dashboard from "../components/Dashboard";
 import Sidebar from "../components/Sidebar";
 // import ChatBotPage from "./ChatBotPage";
 
 const MainPage = () => {
   // You would manage your state and context here
-  const [visibleChatBot, setVisibleChatBot] = useState(false)
+  const [visibleChatBot, setVisibleChatBot] = useState(false);
 
-  const toggleChatBot = () =>{
-    setVisibleChatBot(!visibleChatBot)
-  }
+  const toggleChatBot = () => {
+    setVisibleChatBot(!visibleChatBot);
+  };
 
   const responsive = {
     desktop: {
@@ -35,8 +35,8 @@ const MainPage = () => {
 
   return (
     <div>
-      <div className="w-full flex justify-around p-4">
-        <div className="relative mr-2">
+      <div className="w-full flex p-4">
+        <div className="mr-2">
           <input
             type="text"
             placeholder="Search Text"
@@ -50,7 +50,10 @@ const MainPage = () => {
             />
           </div>
         </div>
-        <button className="flex items-center bg-semiwhite text-black pr-6 pl-3 py-2 rounded-md" onClick={toggleChatBot}>
+        <button
+          className="flex items-center bg-semiwhite text-black pr-6 pl-3 py-2 rounded-md"
+          onClick={toggleChatBot}
+        >
           <span className="pr-2">Chatbot</span>
           <img
             src="./src/assets/chatbot.png"
@@ -65,7 +68,7 @@ const MainPage = () => {
           Popular
         </div>
         <button className=" bg-nuetralpurple w-[60px] text-center text-white px-4 py-2 ml-14 rounded-md">
-         Filter
+          Filter
         </button>
       </div>
       <div className="pl-20">
@@ -239,10 +242,7 @@ const MainPage = () => {
         <div className="bg-darkpurple w-[280px] text-center p-2 px-20 ml-15 rounded-md text-white">
           Recumendation
         </div>
-        <button className=" bg-nuetralpurple w-[60px] text-center text-white px-4 py-2 ml-14 rounded-md">
-
-        </button>
-
+        <button className=" bg-nuetralpurple w-[60px] text-center text-white px-4 py-2 ml-14 rounded-md"></button>
       </div>
       <div className="pl-20">
         <Carousel responsive={responsive} className="py-10">
