@@ -307,6 +307,7 @@ export default function Popular() {
             </section>
           </main>
         </div>
-      </div></>
+      </div>
+      </>
   )
 }

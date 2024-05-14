@@ -44,7 +44,7 @@ export default function ChatBotPage({visible, toggleChatBot}:Props ) {
         <div className='flex flex-col w-full gap-5 p-4'>
           {
             messages?.map((msg, index) =>(
-              <Message text={msg} agent={index % 2 === 0 ? "user": "admin"} />
+              <Message key={index} text={msg} agent={index % 2 === 0 ? "user": "admin"} />
             ))
           }
         </div>
