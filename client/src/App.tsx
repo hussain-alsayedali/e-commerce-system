@@ -17,6 +17,7 @@ import AddProduct from "./pages/AddProduct"
 
 import NewMainPage from "./pages/NewMainPage"
 import AdminNewMainPage from "./pages/AdminNewMainPage"
+import NotePage from "./pages/NotePage";
 function App() {
 
   return (
@@ -35,11 +36,12 @@ function App() {
           <Route path="/shoppingcart" element={<ShoppingCartPage />} />
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/notes" element={<NotePage />} />
           {/* <Route path="/addcategory" element={<AddCategory />} /> */}
 
           <Route path="/userprofile" element={<UserProfile />} /> {/* Added UserProfile route */}
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </React.StrictMode>
   );

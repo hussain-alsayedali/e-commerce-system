@@ -7,6 +7,8 @@ import Product from "../components/Products"
 import Dashboard from '../components/Dashboard'
 import Sidebar from '../components/Sidebar'
 import ChatBotPage from "../pages/ChatBotPage";
+import instance from '../api/axios'
+
 const sortOptions = [
   { name: 'Most Popular', href: '#', current: true },
   { name: 'Best Rating', href: '#', current: false },
@@ -42,6 +44,23 @@ function classNames(...classes: string[]) {
 }
 
 export default function Popular() {
+
+  const fetchProducts = async () => {
+   
+    instance.get("/product/getAllProducts")
+      .then((response) => {
+        console.log(response.data)
+        //const products = response.data.find(c => category.name === "mainCategory").products;
+      })
+      .catch((error) => {
+        console.error(error);
+        // alert("Login failed: " + error.response.data.message);
+      });
+  };
+
+  fetchProducts();
+
+  
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [visibleChatBot, setVisibleChatBot] = useState(false)
 
@@ -51,7 +70,7 @@ export default function Popular() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
   return (
           <>
-                  <Sidebar sidebarToggle={sidebarToggle} role="user"/>
+          <Sidebar sidebarToggle={sidebarToggle} role="user"/>
         <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
           <div className="w-full flex justify-between p-4">
             <div></div>

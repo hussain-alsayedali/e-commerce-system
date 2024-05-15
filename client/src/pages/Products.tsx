@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Sidebar from "../components/Sidebar";
+import Dashboard from "../components/Dashboard";
 
 interface Product {
   name: string;
@@ -75,7 +77,11 @@ function ProductForm() {
     },
   };
 
-  return (
+  const [sidebarToggle, setSidebarToggle] = useState(true);
+    return (
+      <>
+      <Sidebar sidebarToggle={sidebarToggle} role="admin"/>
+      <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
     <ul>
       {catagory.map((catagory) => (
         <li>
@@ -107,6 +113,7 @@ function ProductForm() {
         </li>
       ))}
     </ul>
+    </>
   );
 }
 

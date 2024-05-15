@@ -25,8 +25,9 @@ exports.addProduct = async (req, res) => {
       price: price,
       // image: result.secure_url,
       // cloudinaryId: result.public_id,
-      category: category._id
+      // category: category._id
     });
+    console.log(product)
     await product.save();
     res.status(201).json("success");
   } catch (e) {

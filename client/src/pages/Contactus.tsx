@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Sidebar from '../components/Sidebar.tsx';
 import Dashboard from '../components/Dashboard.tsx';
+import instance from '../api/axios.ts';
 
 export default function Contactus() {
 
@@ -10,26 +11,21 @@ export default function Contactus() {
     const [status, setStatus] = useState("")
 
   
-    const handleSubmit = (e: any) => {
+    const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
-
-      
-      // Handle form submission logic here
-      fetch("", {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({name, email, message})
-      })
-        .then(response => {
-          if(!response.ok){
-              throw new Error("Message failed to sent")
-          }
-          return response.json()
-          })
-        .then(data => {
-            setStatus("Message sent successfullu")
+      instance
+        .post('/note/createNote', {
+          name: name,
+          email: email,
+          message: message,
         })
-        .catch(err => setStatus("Message cannot be sent, you can try later:("))
+        .then((response) => {
+          alert('Note created successfully');
+        })
+        .catch((error) => {
+          console.error('Note creation failed:', error);
+          alert('Note creation failed: ' + error.response.data.message);
+        });
     };
     
   const [sidebarToggle, setSidebarToggle] = useState(true);

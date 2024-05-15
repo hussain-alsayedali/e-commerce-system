@@ -4,6 +4,7 @@ import {
   FaHeadset,
   FaChartBar,
   FaBox,
+  FaPlus,
   FaHistory,
   FaHeart,
   FaTruck,
@@ -22,8 +23,8 @@ function Sidebar({ sidebarToggle, role }: Props) {
   const adminItems = [
     { name: "Home", icon: FaHome, link: "/" },
     { name: "Products", icon: FaBox, link: "productspage" },
-    { name: "Admin Items", icon: FaBox, link: "addproduct" },
-    { name: "Dashboard", icon: FaChartBar, link: "/" },
+    { name: "Adding Products", icon: FaPlus, link: "addproduct" },
+    { name: "Notes", icon: FaChartBar, link: "/notes" },
   ];
 
   // Define items for the user role
@@ -32,7 +33,6 @@ function Sidebar({ sidebarToggle, role }: Props) {
     { name: "Orders", icon: FaBox, link: "/" },
     { name: "History", icon: FaHistory, link: "/" },
     { name: "Favorite", icon: FaHeart, link: "/" },
-    { name: "Products", icon: FaBox, link: "/productspage" },
     { name: "Order Tracker", icon: FaTruck, link: "/" },
     { name: "Contact us", icon: FaHeadset, link: "/contactus" },
   ];

@@ -63,7 +63,7 @@ export default function Popular() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
   return (
           <>
-                  <Sidebar sidebarToggle={sidebarToggle} role="admin"/>
+          <Sidebar sidebarToggle={sidebarToggle} role="admin"/>
         <Dashboard sidebarToggle={sidebarToggle} setSidebarToggle={setSidebarToggle}/>
           <div className="w-full flex justify-between p-4">
             <div></div>
@@ -193,7 +193,7 @@ export default function Popular() {
 
           <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900">New Arrivals</h1>
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900">Products</h1>
 
               <div className="flex items-center">
                 <Menu as="div" className="relative inline-block text-left">
