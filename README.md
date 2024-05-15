@@ -46,4 +46,6 @@ Once the dependencies are installed, start the development server by running: np
 
 This command will launch the development server and make the application accessible in your web browser.
 
+To run the server side, open another terminal, then cs to the server caregory, run npn install, run nodemon index.js. 
+
 That's it! You can now start exploring and working with the project locally.
